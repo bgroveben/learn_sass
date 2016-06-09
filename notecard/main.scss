@@ -43,8 +43,9 @@ $stripe-properties: to bottom, 15%, blue, white;
   -o-transform: $transformation;
 }
 
-@mixin photo-content {
+@mixin photo-content($file) {
   object-fit: cover;
+  content: url(#{$file}.jpg);
 }
 
 .notecard {
@@ -96,6 +97,7 @@ $stripe-properties: to bottom, 15%, blue, white;
       .photo {
         width: 60%;
         margin: 0px auto;
+        @include photo-content('titanosaur');
 
       }
     }
