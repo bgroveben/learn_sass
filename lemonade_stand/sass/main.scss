@@ -42,7 +42,6 @@ h1 {
     display: inline-block;
     margin: 2%;
     border: $border;
-    font-size: 32px;
     @include dimensions(300px, 300px);
   }
 }
