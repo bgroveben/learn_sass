@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+$stripe-properties: to bottom, 15%, blue, white;
+
 @mixin transition($time) {
   transition: $time;
   -webkit-transition: $time;
@@ -45,8 +47,6 @@
   object-fit: cover;
 }
 
-//Add your own mixins here
-
 .notecard {
   width: 300px;
   height: 180px;
@@ -55,7 +55,6 @@
   margin: 20px;
   font-family: Roboto, sans-serif;
   box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2);
-
   @include transform-style(preserve-3d);
   @include transition(0.4s);
 
@@ -92,6 +91,7 @@
     .definition {
       width: 100%;
       height: 100%;
+      @include stripes($stripe_properties...);
 
       .photo {
         width: 60%;
