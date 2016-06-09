@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
+@mixin backface-visibility($visibility) {
+  backface-visibility: $visibility;
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  -ms-backface-visibility: $visibility;
+  -o-backface-visibility: $visibility;
+}
+
 @mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFF) {
   background: repeating-linear-gradient(
     $direction,
@@ -41,6 +49,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    @include backface-visibility(hidden);
   }
 
   .front {
