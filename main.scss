@@ -3,6 +3,8 @@
 // Add variables here
 $translucent-white: rgba(255, 255, 255, 0.3);
 $icon-square-length: 300px;
+$standard-border: 4px solid black;
+
 h1 {
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -10,8 +12,8 @@ h1 {
 
 .banner {
   border : {
-    top: 4px solid black;
-    bottom: 4px solid black;
+    top: $standard-border;
+    bottom: $standard-border;
   }
   font-family: 'Pacifico', cursive;
   height: 400px;
@@ -19,7 +21,7 @@ h1 {
   .slogan {
     background-color: $translucent-white;
     position: absolute;
-    border: 4px solid black;
+    border: $standard-border;
     top: 200px;
     left: 25%;
     width: 50%;
@@ -40,7 +42,7 @@ h1 {
     height: $icon-square-length;
     display: inline-block;
     margin: 2%;
-    border: 4px solid black;
+    border: $standard-border;
     font-size: 32px;
   }
 }
