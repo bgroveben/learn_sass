@@ -1,0 +1,15 @@
+$total: 10; // number of .ray divs in the html page
+$step: 360deg / $total; // used to compute the hue based on color-wheel
+// You can do math in Sass (see above and math directory in this repo) -- check the docs for the rules and symbols
+
+.ray {
+  height: 30px;
+}
+
+@for $i from 1 to $total { // through and to are interchangeable in Sass
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+    width: if($i % 2 == 0, 300px, 350px);
+    margin-left: if($i % 2 == 0, 0px, 50px);
+  }
+}
