@@ -1,6 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-@mixin backface-visibility($visibility) {
+@mixin transition($time) {
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+}
+
+@mixin transform-style($style) {
+  transform-style: $style;
+  -moz-transform-style: $style;
+  -o-transform-style: $style;
+  -ms-transform-style: $style;
+  -webkit-transform-style: $style;
+}
+
+@mixin backface-visibility($visibility:hidden) {
   backface-visibility: $visibility;
   -webkit-backface-visibility: $visibility;
   -moz-backface-visibility: $visibility;
@@ -41,6 +56,9 @@
   font-family: Roboto, sans-serif;
   box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2);
 
+  @include transform-style(preserve-3d);
+  @include transition(0.4s);
+
   &:hover {
     @include transform(rotatey(-180deg));
   }
@@ -69,6 +87,7 @@
   z-index: 1;
   word-wrap: break-word;
   line-height: 1.6;
+  @include transform(rotatey(-180deg));
 
     .definition {
       width: 100%;
