@@ -8,6 +8,10 @@ h1 {
 }
 
 .banner {
+  border : {
+    top: 4px solid black;
+    bottom: 4px solid black;
+  }
   font-family: 'Pacifico', cursive;
   height: 400px;
   background-image: url("lemonade.jpg");
